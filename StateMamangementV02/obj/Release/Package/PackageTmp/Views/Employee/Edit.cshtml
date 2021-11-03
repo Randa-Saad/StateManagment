@@ -1,0 +1,44 @@
+﻿@model Employee
+@{
+    ViewBag.Title = "Edit";
+}
+
+<h2>Edit</h2>
+
+
+<form method="post" action="/employee/Edit">
+    
+    <input type="hidden" name="id"  value="@Model.Id"/>
+
+    <div class="row mb-3">
+        <label for="name" class="col-sm-2 col-form-label">Name</label>
+        <div class="col-sm-10">
+            <input type="text" class="form-control" name="name" id="name" value="@Model.Name" />
+        </div>
+    </div>
+
+    <div class="row mb-3">
+        <label for="Age" class="col-sm-2 col-form-label">Age</label>
+        <div class="col-sm-10">
+            <input type="text" class="form-control" name="Age" id="Age" value="@Model.Age" />
+        </div>
+    </div>
+
+    <div class="row mb-3">
+        <label for="Salary" class="col-sm-2 col-form-label">Salary</label>
+        <div class="col-sm-10">
+            <input type="text" class="form-control" name="Salary" id="Salary" value="@Model.Salary" />
+        </div>
+    </div>
+
+    <div class="row mb-3">
+        <label for="DeptId" class="col-sm-2 col-form-label">Department</label>
+        <div class="col-sm-10">
+            <input type="text" class="form-control" name="DeptId" id="DeptId" value="@Model.DeptId" />
+        </div>
+    </div>
+
+    <input type="submit" class="btn btn-primary" />
+</form>
+
+<a href="/Employee" class="btn">Back To Index</a>

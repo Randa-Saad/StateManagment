@@ -1,0 +1,39 @@
+﻿@model IEnumerable<Employee>
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+@*Anchor uses GET ONLY*@
+<a href="/Employee/create" class="btn btn-success">Create New</a>
+<br />
+<br />
+<br />
+
+<table class="table table-hover table-striped table-bordered">
+    <tr>
+        <th>Id</th>
+        <th>Name</th>
+        <th>Age</th>
+        <th>Salary</th>
+        <th>Department</th>
+        <th></th>
+    </tr>
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>@item.Id</td>
+            <td>@item.Name</td>
+            <td>@item.Age</td>
+            <td>@item.Salary</td>
+            <td>@item.Department.DeptName</td>
+            <td>
+                <a href="/Employee/Edit/@item.Id" class="btn btn-primary">Edit</a> |
+                <a href="/Employee/Details?id=@item.Id&name=@item.Name" class="btn btn-dark">Details</a> |
+                <a href="/Employee/Delete/@item.Id" class="btn btn-danger" onclick="return confirm('R U Sure Delete !!!');">Delete</a> 
+            </td>
+        </tr>
+    }
+</table>
+

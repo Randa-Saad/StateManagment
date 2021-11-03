@@ -1,0 +1,17 @@
+﻿
+@{
+    ViewBag.Title = "Contact";
+    var emp1 = Session["e1"] as Employee;
+}
+
+<h2>Contact</h2>
+
+<h1>@emp1.Id</h1>
+
+<h1>@emp1.Name</h1>
+
+<h1>@emp1.Age</h1>
+
+<h1>@emp1.Salary</h1>
+
+<h1>@Session.SessionID</h1>

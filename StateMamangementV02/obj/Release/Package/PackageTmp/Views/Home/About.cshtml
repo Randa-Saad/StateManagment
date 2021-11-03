@@ -1,0 +1,17 @@
+﻿
+@{
+    ViewBag.Title = "About";
+
+    HttpCookie ckobj = Request.Cookies["ckfile"];
+    
+}
+
+<h2>About</h2>
+
+<h1>@ckobj["Id"]</h1>
+    
+<h1>@ckobj["Name"]</h1>
+    
+<h1>@ckobj["Age"]</h1>
+
+<h1>@ckobj["Salary"]</h1>
